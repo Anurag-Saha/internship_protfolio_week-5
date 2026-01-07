@@ -1,0 +1,172 @@
+/* ===============================
+   NAV LINKS (ADVANCED SELECTORS)
+   =============================== */
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a:is(:hover, :focus-visible) {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+/* ===============================
+   SKILLS HOVER ANIMATION
+   =============================== */
+.skill-item {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   SECTION ANIMATION (KEYFRAMES)
+   =============================== */
+section {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   BUTTON
+   =============================== */
+button {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   CONTACT SECTION – VISUAL ENHANCEMENT
+   (CONTENT UNCHANGED)
+========================================= */
+
+#contact {
+  background: linear-gradient(
+    135deg,
+    rgba(220, 53, 69, 0.08),
+    rgba(0, 123, 255, 0.08)
+  );
+  border-radius: 16px;
+}
+
+/* Form container as a card */
+#contact form {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: contactFade 0.6s ease both;
+}
+
+/* Form group spacing */
+#contact .form-group {
+  position: relative;
+}
+
+/* Inputs & textarea – modern look */
+#contact input,
+#contact textarea {
+  background: #f8fafc;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus state – premium glow */
+#contact input:focus,
+#contact textarea:focus {
+  background: #ffffff;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.15);
+}
+
+/* Textarea refinement */
+#contact textarea {
+  min-height: 160px;
+}
+
+/* Submit button emphasis */
+#contact button {
+  margin-top: 1rem;
+  align-self: center;
+  width: 60%;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* Button hover – smooth but elegant */
+#contact button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   SUBTLE ANIMATION
+========================================= */
+@keyframes contactFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

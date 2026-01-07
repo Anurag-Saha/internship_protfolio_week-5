@@ -1,0 +1,109 @@
+/* ===============================
+   HEADER & NAV (FLEXBOX)
+   =============================== */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 2rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--white);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+/* ===============================
+   MAIN LAYOUT (CSS GRID)
+   =============================== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* ===============================
+   SECTIONS
+   =============================== */
+section {
+  background-color: var(--white);
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* ===============================
+   ABOUT SECTION
+   =============================== */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#about img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* ===============================
+   SKILLS (FLEXBOX)
+   =============================== */
+#skills {
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ===============================
+   CONTACT FORM (GRID)
+   =============================== */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}

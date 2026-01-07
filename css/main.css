@@ -1,0 +1,81 @@
+/* ===============================
+   CSS VARIABLES (THEME SYSTEM)
+   =============================== */
+:root {
+  --primary-color: #DC3545;
+  --secondary-color: #1e293b;
+  --accent-color: #007BFF;
+  --text-color: #334155;
+  --bg-color: #f8fafc;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   RESET
+   =============================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   BASE STYLES
+   =============================== */
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* ===============================
+   TYPOGRAPHY (UNCHANGED LOOK)
+   =============================== */
+h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* ===============================
+   DARK THEME (IMPROVED READABILITY)
+   =============================== */
+body.theme-dark {
+  /* Core colors */
+  --bg-color: #0b1220;          /* Dark navy background */
+  --white: #111827;             /* Section/card background */
+
+  /* Text colors */
+  --text-color: #e5e7eb;        /* Main readable text */
+  --secondary-color: #f1f5f9;   /* Headings */
+  
+  /* Accent colors */
+  --primary-color: #ef4444;     /* Red accent */
+  --accent-color: #60a5fa;      /* Blue accent */
+
+  /* Shadows (lighter for dark bg) */
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
