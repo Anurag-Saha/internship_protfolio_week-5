@@ -1,59 +1,4 @@
 /* ===============================
-   NAV LINKS (ADVANCED SELECTORS)
-   =============================== */
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-nav a:is(:hover, :focus-visible) {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-color);
-  transition: width 0.3s ease;
-  transform: translateX(-50%);
-}
-
-nav a:hover::after {
-  width: 80%;
-}
-
-/* ===============================
-   SKILLS HOVER ANIMATION
-   =============================== */
-.skill-item {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: var(--white);
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.skill-item:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* ===============================
    SECTION ANIMATION (KEYFRAMES)
    =============================== */
 section {
@@ -169,4 +114,49 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+/* NAV LINKS */
+.nav__link {
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav__link:is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 80%;
+}
+
+/* SKILLS */
+.skills__item {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills__item:hover {
+  transform: translateY(-5px) scale(1.05);
 }

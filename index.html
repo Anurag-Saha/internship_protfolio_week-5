@@ -21,16 +21,19 @@
   <body>
     <!-- Header Section -->
     <header>
-      <div class="container">
-        <h1>Anurag Saha</h1>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button onclick="toggleTheme()">Toggle Theme</button>
-      </div>
-    </header>
+  <div class="header__container">
+    <h1>Anurag Saha</h1>
+
+    <nav class="nav">
+      <a href="#about" class="nav__link">About</a>
+      <a href="#skills" class="nav__link">Skills</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+</header>
+
 
     <!-- Main Content -->
     <main>
@@ -56,16 +59,18 @@
 
       <!-- Skills Section -->
       <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-          <div class="skill-item">HTML5</div>
-          <div class="skill-item">CSS3</div>
-          <div class="skill-item">JavaScript</div>
-          <div class="skill-item">React JS</div>
-          <div class="skill-item">Git & GitHub</div>
-          <div class="skill-item">Node JS</div>
-        </div>
-      </section>
+  <h2>My Skills</h2>
+
+  <div class="skills__list">
+    <div class="skills__item">HTML5</div>
+    <div class="skills__item">CSS3</div>
+    <div class="skills__item">JavaScript</div>
+    <div class="skills__item">React JS</div>
+    <div class="skills__item">Git & GitHub</div>
+    <div class="skills__item">Node JS</div>
+  </div>
+</section>
+
 
       <!-- Contact Section -->
       <section id="contact">
@@ -75,7 +80,7 @@
         </p>
 
         <form>
-          <div class="form-group">
+          <div class="contact__group">
             <label for="name">Name:</label>
             <input
               type="text"
@@ -86,7 +91,7 @@
             />
           </div>
 
-          <div class="form-group">
+          <div class="contact__group">
             <label for="email">Email:</label>
             <input
               type="email"
@@ -97,7 +102,7 @@
             />
           </div>
 
-          <div class="form-group">
+          <div class="contact__group">
             <label for="message">Message:</label>
             <textarea
               id="message"
